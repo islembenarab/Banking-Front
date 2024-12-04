@@ -1,0 +1,15 @@
+<nav class="flex justify-between bg-black items-center">
+  <!-- Span on the left -->
+  <span class="text-white px-3">
+    <p class="text-xl">Banking</p>
+  </span>
+
+  <!-- Links on the right -->
+  <div class="flex gap-2">
+    @for (route of routes; track $index){
+      <a class="text-white p-2 hover:bg-gray-50 hover:text-black" href="{{ route.path }}">
+        {{ route.data?.['title'] }}
+      </a>
+    }
+  </div>
+</nav>
